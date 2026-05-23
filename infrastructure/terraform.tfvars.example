@@ -1,0 +1,20 @@
+# Example Terraform variables
+# Copy this file to terraform.tfvars and customize as needed
+
+aws_region = "us-east-1"
+
+# Network configuration
+vpc_cidr            = "10.0.0.0/16"
+public_subnet_cidr  = "10.0.1.0/24"
+private_subnet_cidr = "10.0.2.0/24"
+
+# Instance types
+# t3.small: 2 vCPU, 2GB RAM, $0.0208/hour (suitable for free tier)
+# t3.medium: 2 vCPU, 4GB RAM, $0.0416/hour
+api_instance_type       = "t3.small"
+worker_instance_type    = "t3.small"
+inference_instance_type = "t3.medium"
+
+# SSH access - IMPORTANT: restrict this to your IP for security
+# ssh_cidr = "YOUR.IP.ADDRESS/32"
+ssh_cidr = "0.0.0.0/0"  # Open to world (NOT recommended for production)
