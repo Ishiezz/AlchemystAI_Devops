@@ -1,0 +1,32 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+tfplan
+crash.log
+.terraform.tfstate.lock.info
+
+# Node
+node_modules/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+*.pem
+*.key
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
